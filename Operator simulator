@@ -1,0 +1,15 @@
+import random
+OPerators = ["+", "-", "*"]
+Min_Operand = 3
+Max_Operand= 12
+
+def generate_problem():
+    left= random.randint(Min_Operand, Max_Operand)
+    right=random.randint(Min_Operand, Max_Operand)
+    operator= random.choice(OPerators)
+
+    expr= str(left)+" "+ operator +" "+ str(right)
+    print(expr)
+    return expr
+
+generate_problem()
