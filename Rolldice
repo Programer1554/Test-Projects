@@ -27,7 +27,7 @@ while max(player_scores)< max_score:
         current_score=0
         while True:
             should_roll= input("Would you like to role (y)? ")
-            if should_roll.lower() == 'y':
+            if should_roll.lower() != 'y':
                 break
             value= roll()
             if value==1:
@@ -43,5 +43,5 @@ while max(player_scores)< max_score:
         print("Your total score is:", player_scores[player_idx])
 
 max_scores= max(player_scores)
-winning_idx= player_scores.index(max_scores)
+winning_idx= player_scores.index(max_score)
 print("Player number", winning_idx + 1, "is the winner with a score of:", max_score)
